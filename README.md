@@ -1,136 +1,71 @@
 # Crypto Belli
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+A real-time cryptocurrency visualization and tracking application that displays global market data on an interactive world map.
 
-An educational cryptocurrency visualization platform that transforms market data into an engaging war-game inspired experience.
+## Features
 
-## Project Structure
+- Interactive world map showing cryptocurrency origins and market presence
+- Real-time market data tracking via CoinGecko API
+- Market summary with total market cap and top movers
+- Detailed cryptocurrency table with price and market information
+- Zoom and pan capabilities for map exploration
 
-```
-crypto-belli/
-├── src/
-│   ├── components/           # React components
-│   │   ├── Map/             # D3.js map visualization
-│   │   │   ├── WorldMap.js  # Base map component
-│   │   │   └── Nations.js   # Cryptocurrency nations
-│   │   ├── UI/              # Basic UI components
-│   │   │   ├── Tooltip.js   # Educational tooltips
-│   │   │   └── Reports.js   # Daily summaries
-│   │   └── common/          # Shared components
-│   ├── services/
-│   │   ├── api.js           # CoinGecko API integration
-│   │   └── storage.js       # Local storage management
-│   ├── styles/              # CSS module files
-│   │   ├── Map.module.css
-│   │   └── UI.module.css
-│   └── utils/
-│       ├── formatters.js    # Data formatting helpers
-│       └── constants.js     # Shared constants
-├── public/
-│   ├── index.html
-│   └── assets/             # Static assets
-│       └── flags/          # Cryptocurrency nation flags
-└── docs/                   # Documentation
-    ├── core-concept.md     # Project overview
-    ├── map-mechanics.md    # Map visualization details
-    ├── education.md        # Educational content
-    └── future-concepts/    # Future feature ideas
-```
+## Tech Stack
+
+- React 18.2.0
+- D3.js 7.8.5
+- Zustand for state management
+- CoinGecko API integration
+- Axios for API requests
+- React Query for data fetching
 
 ## Getting Started
 
-1. Clone the repository
+1. Clone the repository:
+```bash
+git clone https://github.com/bhoyte/crypto-belli.git
+```
+
 2. Install dependencies:
 ```bash
+cd crypto-belli
 npm install
 ```
 
-3. Start development server:
+3. Start the development server:
 ```bash
 npm start
 ```
 
-## Key Features
+The application will be available at `http://localhost:3000`.
 
-- Simple map visualization of top 10 cryptocurrencies
-- Hourly market data updates via CoinGecko API
-- Educational tooltips and terminology guides
-- Daily market summary reports
+## Project Status
 
-## Technology Stack
+### Completed
+- ✅ Initial Setup and Configuration
+- ✅ Basic Map Visualization
+- ✅ Market Data Integration
+- ✅ Real-time Data Updates
 
-- React (Create React App) for UI framework
-- D3.js for basic map visualization
-- CoinGecko API for market data
-- CSS Modules for styling
-- GitHub Pages for simple hosting
-
-## Development Status
-
-Current Phase: Initial Development
-Target Launch: Q4 2024
-
-## Project Workflow
-
-### Current Status
-- ✅ Project initialized with React and core dependencies
-- ✅ Basic project structure set up
-- ✅ GitHub project board configured with initial tasks
-- 🏗️ Initial development environment ready
-
-### Development Process
-1. **Planning Phase**
-   - Issues are created and labeled in GitHub
-   - Tasks are organized in the project board
-   - Priority and type labels guide development focus
-
-2. **Development Phase**
-   - Work on tasks according to priority
-   - Move cards from "Todo" to "In Progress"
-   - Create pull requests for review
-
-3. **Review Phase**
-   - Code review process
-   - Testing and validation
-   - Move cards to "Done" when completed
-
-### Current Sprint Focus
-- Initial Setup and Configuration
-- Core Map Visualization Features
-- Basic UI Components
-- Project Documentation
+### In Progress
+- 🔄 Enhanced Map Features
+- 🔄 UI Component Implementation
+- 🔄 Documentation
 
 ## Contributing
 
-1. Check the project board for available tasks
-2. Assign yourself to an issue
-3. Create a branch for your work
-4. Submit a pull request when ready
-5. Await review and merge
-
-## Development Guidelines
-
-1. Keep it Simple
-   - Focus on core educational features
-   - Use basic animations and transitions
-   - Minimize external dependencies
-
-2. Performance First
-   - Hourly data updates instead of real-time
-   - Efficient DOM updates
-   - Local storage for caching
-
-3. Educational Focus
-   - Clear, beginner-friendly UI
-   - Helpful tooltips and guides
-   - Simple market explanations
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-The MIT License was chosen because:
-- It's simple and widely understood
-- Allows for both educational and commercial use
-- Provides basic liability protection
-- Encourages collaboration and sharing
+## Acknowledgments
+
+- CoinGecko API for cryptocurrency data
+- D3.js community for visualization tools
+- React community for component libraries
