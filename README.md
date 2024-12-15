@@ -70,74 +70,43 @@ npm start
 Current Phase: Initial Development
 Target Launch: Q4 2024
 
-## Development Workflow
+## Project Workflow
 
-### GitHub Project Boards
-
-The project uses GitHub Projects for task management with the following structure:
-
-```
-Project Boards:
-└── Crypto Belli Development
-    ├── 📋 Backlog
-    │   └── Future features and ideas
-    ├── 🎯 Sprint Planning
-    │   └── Next tasks to implement
-    ├── 🏗️ In Progress
-    │   └── Currently working on
-    ├── 👀 Review
-    │   └── Ready for testing
-    └── ✅ Done
-        └── Completed features
-```
-
-### Issue Labels
-
-- `feature`: New functionality
-- `bug`: Something isn't working
-- `documentation`: Documentation updates
-- `enhancement`: Improvements to existing features
-- `good first issue`: Good for first-time contributors
-- `help wanted`: Extra attention needed
+### Current Status
+- ✅ Project initialized with React and core dependencies
+- ✅ Basic project structure set up
+- ✅ GitHub project board configured with initial tasks
+- 🏗️ Initial development environment ready
 
 ### Development Process
+1. **Planning Phase**
+   - Issues are created and labeled in GitHub
+   - Tasks are organized in the project board
+   - Priority and type labels guide development focus
 
-1. **Task Creation**
-   - Create issues for new features/bugs
-   - Add appropriate labels
-   - Link to project board
+2. **Development Phase**
+   - Work on tasks according to priority
+   - Move cards from "Todo" to "In Progress"
+   - Create pull requests for review
 
-2. **Development**
-   - Create feature branch from issue
-   - Implement changes
-   - Test locally
+3. **Review Phase**
+   - Code review process
+   - Testing and validation
+   - Move cards to "Done" when completed
 
-3. **Review & Deploy**
-   - Self-review changes
-   - Test on GitHub Pages
-   - Merge to main branch
+### Current Sprint Focus
+- Initial Setup and Configuration
+- Core Map Visualization Features
+- Basic UI Components
+- Project Documentation
 
-### Milestones
+## Contributing
 
-- **Phase 1: Foundation** (Months 1-3)
-  - [ ] Project setup
-  - [ ] Basic map implementation
-  - [ ] API integration
-
-- **Phase 2: Core Features** (Months 4-6)
-  - [ ] Interactive map
-  - [ ] Battle reports
-  - [ ] Educational tooltips
-
-- **Phase 3: Polish** (Months 7-9)
-  - [ ] UI improvements
-  - [ ] Content creation
-  - [ ] Bug fixes
-
-- **Phase 4: Launch** (Months 10-12)
-  - [ ] Testing
-  - [ ] Documentation
-  - [ ] Public release
+1. Check the project board for available tasks
+2. Assign yourself to an issue
+3. Create a branch for your work
+4. Submit a pull request when ready
+5. Await review and merge
 
 ## Development Guidelines
 
