@@ -1,35 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import WorldMap from './components/Map/WorldMap';
 import Reports from './components/UI/Reports';
-import { fetchTopCryptos } from './services/api';
-import { loadFromCache, saveToCache } from './services/storage';
+import useCryptoStore from './store/cryptoStore';
 import { UPDATE_INTERVAL } from './utils/constants';
+import './App.css';
 
 function App() {
-  const [cryptoData, setCryptoData] = useState([]);
+  const { cryptos, loading, error, fetchCryptos } = useCryptoStore();
 
   useEffect(() => {
-    const loadData = async () => {
-      // Try to load from cache first
-      const cachedData = loadFromCache();
-      if (cachedData) {
-        setCryptoData(cachedData);
-        return;
-      }
-
-      // If no cache, fetch fresh data
-      const data = await fetchTopCryptos();
-      if (data.length > 0) {
-        setCryptoData(data);
-        saveToCache(data);
-      }
-    };
-
-    loadData();
-    const interval = setInterval(loadData, UPDATE_INTERVAL);
-
+    fetchCryptos();
+    const interval = setInterval(fetchCryptos, UPDATE_INTERVAL);
     return () => clearInterval(interval);
-  }, []);
+  }, [fetchCryptos]);
+
+  if (error) {
+    return <div className="App">
+      <div className="error-message">Error: {error}</div>
+    </div>;
+  }
 
   return (
     <div className="App">
@@ -37,8 +26,8 @@ function App() {
         <h1>Crypto Belli</h1>
       </header>
       <main>
-        <WorldMap cryptoData={cryptoData} />
-        <Reports dailyData={cryptoData} />
+        <WorldMap data={cryptos} />
+        <Reports data={cryptos} loading={loading} />
       </main>
     </div>
   );
